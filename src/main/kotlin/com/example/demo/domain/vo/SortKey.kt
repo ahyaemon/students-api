@@ -1,8 +1,8 @@
 package com.example.demo.domain.vo
 
-enum class SortKey {
-  NAME,
-  LOGIN_ID,
+enum class SortKey(val value: String) {
+  NAME("name"),
+  LOGIN_ID("login_id"),
   ;
 
   companion object {

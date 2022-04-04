@@ -5,6 +5,9 @@ data class Pager(
   val limit: Limit,
 ) {
 
+  val offset: Int
+  get() = (page.value - 1) * limit.value
+
   companion object {
 
     fun of(p: String?, l: String?): Pager {

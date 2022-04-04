@@ -1,8 +1,8 @@
 package com.example.demo.domain.vo
 
-enum class Order {
-  ASC,
-  DESC,
+enum class Order(val value: String) {
+  ASC("asc"),
+  DESC("desc"),
   ;
 
   companion object {

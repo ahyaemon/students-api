@@ -5,11 +5,11 @@ insert into teacher values
 ;
 
 insert into student values
-(1, 'student_1', 'taro'),
-(2, 'student_2', 'jiro'),
-(3, 'student_3', 'saburo'),
-(4, 'student_4', 'siro'),
-(5, 'student_5', 'goro')
+(1, 'student_aaa', 'yamada_taro'),
+(2, 'student_bbb', 'yamada_jiro'),
+(3, 'student_ccc', 'tanaka_saburo'),
+(4, 'student_abc', 'tanaka_siro'),
+(5, 'student_aab', 'tanaka_goro')
 ;
 
 insert into classroom values
