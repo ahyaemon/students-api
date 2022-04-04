@@ -1,7 +1,7 @@
 package com.example.demo.web
 
 import com.example.demo.application.ListStudentQuery
-import com.example.demo.domain.*
+import com.example.demo.domain.vo.*
 
 data class ListStudentRequest(
   val teacherId: String?,

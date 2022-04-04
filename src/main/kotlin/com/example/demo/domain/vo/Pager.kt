@@ -1,4 +1,4 @@
-package com.example.demo.domain
+package com.example.demo.domain.vo
 
 data class Pager(
   val page: Page,

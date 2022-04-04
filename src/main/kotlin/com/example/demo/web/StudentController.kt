@@ -1,7 +1,7 @@
 package com.example.demo.web
 
 import com.example.demo.application.ListStudentsUseCase
-import com.example.demo.domain.ValidationException
+import com.example.demo.domain.vo.ValidationException
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController

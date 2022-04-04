@@ -4,5 +4,5 @@ data class Student(
   val id: Int,
   val name: String,
   val loginId: String,
-  val classRooms: List<Classroom>
+  val classrooms: List<Classroom>
 )

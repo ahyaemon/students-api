@@ -1,4 +1,4 @@
-package com.example.demo.domain
+package com.example.demo.domain.vo
 
 data class Page(
   val value: Int
