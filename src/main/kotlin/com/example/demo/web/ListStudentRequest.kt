@@ -1,12 +1,13 @@
 package com.example.demo.web
 
 import com.example.demo.application.ListStudentQuery
+import com.example.demo.domain.TeacherId
 
 data class ListStudentRequest(
-  val teacherId: Int,
+  val teacherId: String?,
 ) {
 
   fun toQuery(): ListStudentQuery = ListStudentQuery(
-    teacherId = teacherId,
+    teacherId = TeacherId.of(teacherId),
   )
 }
