@@ -13,6 +13,7 @@ class StudentController(
 
   @GetMapping("/students")
   fun listStudents(request: ListStudentRequest): ListStudentResponse {
+    println(request)
     val students = listStudentsUseCase.handle(request.toQuery())
     return ListStudentResponse(students, students.size)
   }
