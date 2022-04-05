@@ -35,6 +35,9 @@ dependencies {
 
 	// kotest
 	testImplementation("io.kotest:kotest-assertions-core:5.2.2")
+
+	// mockk
+	testImplementation("io.mockk:mockk:1.12.3")
 }
 
 tasks.withType<KotlinCompile> {
