@@ -37,7 +37,7 @@ class StudentRepositoryImpl(
       .on(CLASSROOM.ID.eq(STUDENT_BELONG_CLASSROOM.CLASSROOM_ID))
       .innerJoin(TEACHER_BELONG_CLASSROOM)
       .on(TEACHER_BELONG_CLASSROOM.CLASSROOM_ID.eq(CLASSROOM.ID))
-      .and(TEACHER_BELONG_CLASSROOM.TEACHER_ID.eq(1))
+      .and(TEACHER_BELONG_CLASSROOM.TEACHER_ID.eq(teacherId.value))
       .where(createLike(nameLike, loginIdLike))
       .orderBy(sorter.createOrderBy())
       .limit(pager.limit.value)
@@ -94,7 +94,7 @@ class StudentRepositoryImpl(
   private fun Sorter.createOrderBy() = when (sortKey) {
     SortKey.NAME -> STUDENT.NAME
     SortKey.LOGIN_ID -> STUDENT.LOGIN_ID
-  }.apply {
+  }.run {
     when (order) {
       Order.ASC -> asc()
       Order.DESC -> desc()
