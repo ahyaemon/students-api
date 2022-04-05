@@ -52,4 +52,5 @@ curl 'http://localhost:8080/students?teacherId=1&loginId_like=ab'
 ## やっていないこと
 - 環境によるプロファイルの設定、ログレベルの設定
 - TDD
+- 負の値のチェックや桁数などのバリデーション（nullチェック、数値チェックは作成）
 - エラー時のレスポンスの設計

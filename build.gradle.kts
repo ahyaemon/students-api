@@ -32,6 +32,9 @@ dependencies {
 	jooqGenerator("com.h2database:h2")
 	jooqGenerator("org.jooq:jooq-meta-extensions")
 	jooqGenerator("jakarta.xml.bind:jakarta.xml.bind-api:3.0.1")
+
+	// kotest
+	testImplementation("io.kotest:kotest-assertions-core:5.2.2")
 }
 
 tasks.withType<KotlinCompile> {
