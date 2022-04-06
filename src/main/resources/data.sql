@@ -1,3 +1,11 @@
+SET REFERENTIAL_INTEGRITY FALSE;
+truncate table student_belong_classroom;
+truncate table teacher_belong_classroom;
+truncate table student;
+truncate table teacher;
+truncate table classroom;
+SET REFERENTIAL_INTEGRITY TRUE;
+
 insert into teacher values
 (1),
 (2),
