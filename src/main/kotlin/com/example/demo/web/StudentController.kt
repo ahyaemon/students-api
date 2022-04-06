@@ -14,9 +14,9 @@ class StudentController(
 ) {
 
   @GetMapping("/students")
-  fun listStudents(request: ListStudentRequest): ListStudentResponse {
+  fun listStudents(request: ListStudentsRequest): ListStudentsResponse {
     val students = listStudentsUseCase.handle(request.toQuery())
-    return ListStudentResponse(students, students.size)
+    return ListStudentsResponse(students, students.size)
   }
 
   @ExceptionHandler(ValidationException::class)
