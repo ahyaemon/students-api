@@ -21,9 +21,9 @@ insert into student values
 ;
 
 insert into classroom values
-(1, '上'),
-(2, '中'),
-(3, '下')
+(1, 'classA'),
+(2, 'classB'),
+(3, 'classC')
 ;
 
 insert into student_belong_classroom values
