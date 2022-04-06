@@ -8,6 +8,8 @@
 ./gradlew bootBuildImage
 ```
 
+※ mac での動作確認済み。windows の場合は gradlew の代わりに gradlew.bat を使用する
+
 ### 2. docker container の起動
 
 ```shell
