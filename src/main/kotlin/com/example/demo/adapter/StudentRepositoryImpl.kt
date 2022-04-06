@@ -1,6 +1,6 @@
 package com.example.demo.adapter
 
-import com.example.demo.application.StudentRepository
+import com.example.demo.application.ListStudentsPort
 import com.example.demo.application.data.Classroom
 import com.example.demo.application.data.Student
 import com.example.demo.domain.vo.*
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository
 @Repository
 class StudentRepositoryImpl(
   private val dslContext: DSLContext,
-): StudentRepository {
+): ListStudentsPort {
 
   override fun listByTeacherId(
     teacherId: TeacherId,
