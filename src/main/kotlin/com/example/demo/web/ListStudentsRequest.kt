@@ -3,7 +3,7 @@ package com.example.demo.web
 import com.example.demo.application.ListStudentQuery
 import com.example.demo.domain.vo.*
 
-data class ListStudentRequest(
+data class ListStudentsRequest(
   val teacherId: String?,
 
   // 表示するページ番号を指定します

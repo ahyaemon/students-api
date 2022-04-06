@@ -47,7 +47,7 @@ curl 'http://localhost:8080/students?teacherId=1&loginId_like=ab'
 - 設計思想
   - DDD, CleanArchitecture をかいつまんで実装
     - 他に依存しない domain 層を作り、application 層のユースケースが依存する
-    - adapter には外界（DB）とやりとりするクラスを置く
+    - adapter には外界（DB）とやりとりするクラスを置き、application 層にある port を実装する
 
 ## やっていないこと
 - 環境によるプロファイルの設定、ログレベルの設定

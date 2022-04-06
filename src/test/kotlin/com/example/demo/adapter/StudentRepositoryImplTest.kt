@@ -1,6 +1,5 @@
 package com.example.demo.adapter
 
-import com.example.demo.application.StudentRepository
 import com.example.demo.application.data.Classroom
 import com.example.demo.application.data.Student
 import com.example.demo.domain.vo.*
@@ -20,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional
 internal class StudentRepositoryImplTest {
 
   @Autowired
-  private lateinit var studentRepository: StudentRepository
+  private lateinit var studentRepositoryImpl: StudentRepositoryImpl
 
   @Autowired
   private lateinit var dslContext: DSLContext
@@ -52,7 +51,7 @@ internal class StudentRepositoryImplTest {
 
   @Test
   fun `単一クラスをもつ先生のIDで取得`() {
-    val students = studentRepository.listByTeacherId(
+    val students = studentRepositoryImpl.listByTeacherId(
       teacherId = TeacherId(1),
       pager = Pager(Page(1), Limit(100)),
       sorter = Sorter(SortKey.LOGIN_ID, Order.ASC),
@@ -73,7 +72,7 @@ internal class StudentRepositoryImplTest {
 
   @Test
   fun `複数クラスをもつ先生のIDで取得`() {
-    val students = studentRepository.listByTeacherId(
+    val students = studentRepositoryImpl.listByTeacherId(
       teacherId = TeacherId(2),
       pager = Pager(Page(1), Limit(100)),
       sorter = Sorter(SortKey.LOGIN_ID, Order.ASC),
@@ -97,7 +96,7 @@ internal class StudentRepositoryImplTest {
 
   @Test
   fun `nameLikeでフィルター`() {
-    val students = studentRepository.listByTeacherId(
+    val students = studentRepositoryImpl.listByTeacherId(
       teacherId = TeacherId(2),
       pager = Pager(Page(1), Limit(100)),
       sorter = Sorter(SortKey.LOGIN_ID, Order.ASC),
@@ -117,7 +116,7 @@ internal class StudentRepositoryImplTest {
 
   @Test
   fun `loginIdLikeでフィルター`() {
-    val students = studentRepository.listByTeacherId(
+    val students = studentRepositoryImpl.listByTeacherId(
       teacherId = TeacherId(2),
       pager = Pager(Page(1), Limit(100)),
       sorter = Sorter(SortKey.LOGIN_ID, Order.ASC),
@@ -138,7 +137,7 @@ internal class StudentRepositoryImplTest {
 
   @Test
   fun `limitで件数制限`() {
-    val students = studentRepository.listByTeacherId(
+    val students = studentRepositoryImpl.listByTeacherId(
       teacherId = TeacherId(2),
       pager = Pager(Page(1), Limit(2)),
       sorter = Sorter(SortKey.LOGIN_ID, Order.ASC),
@@ -159,7 +158,7 @@ internal class StudentRepositoryImplTest {
 
   @Test
   fun `pageでページ指定`() {
-    val students = studentRepository.listByTeacherId(
+    val students = studentRepositoryImpl.listByTeacherId(
       teacherId = TeacherId(2),
       pager = Pager(Page(2), Limit(2)),
       sorter = Sorter(SortKey.LOGIN_ID, Order.ASC),
@@ -176,7 +175,7 @@ internal class StudentRepositoryImplTest {
 
   @Test
   fun `名前順に並べ替え`() {
-    val students = studentRepository.listByTeacherId(
+    val students = studentRepositoryImpl.listByTeacherId(
       teacherId = TeacherId(2),
       pager = Pager(Page(1), Limit(100)),
       sorter = Sorter(SortKey.NAME, Order.DESC),

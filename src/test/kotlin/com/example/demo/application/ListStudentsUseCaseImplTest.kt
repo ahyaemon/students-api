@@ -22,11 +22,11 @@ internal class ListStudentsUseCaseImplTest {
       )),
     )
 
-    val repository = mockk<StudentRepository>().apply {
+    val port = mockk<ListStudentsPort>().apply {
       every { listByTeacherId(any(), any(), any(), any(), any()) } returns students
     }
 
-    val useCase = ListStudentsUseCaseImpl(repository)
+    val useCase = ListStudentsUseCaseImpl(port)
     val query = ListStudentQuery(
       TeacherId(1),
       Pager(Page(1), Limit(10)),

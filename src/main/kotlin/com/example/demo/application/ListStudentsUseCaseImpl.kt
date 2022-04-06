@@ -5,11 +5,11 @@ import org.springframework.stereotype.Component
 
 @Component
 class ListStudentsUseCaseImpl(
-  private val studentRepository: StudentRepository,
+  private val listStudentsPort: ListStudentsPort,
 ): ListStudentsUseCase {
 
   override fun handle(query: ListStudentQuery): List<Student> {
-    return studentRepository.listByTeacherId(
+    return listStudentsPort.listByTeacherId(
       teacherId = query.teacherId,
       pager = query.pager,
       sorter = query.sorter,
